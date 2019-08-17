@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#121212"
+    tools:context="com.qass.serialmonitor.BluetoothActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/bluetooth_activity_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="#121212"
+        android:elevation="24dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:titleTextColor="#BDBDBD">
+
+    </android.support.v7.widget.Toolbar>
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="98dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="99dp"
+        android:text="Bluetooth Mode"
+        android:textColor="#BBDEFB "
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bluetooth_activity_toolbar" />
+
+    <Button
+        android:id="@+id/bluetooth_scan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="28dp"
+        android:background="#018786"
+        android:elevation="10dp"
+        android:onClick="scanDevices"
+        android:text="Scan for new devices"
+        android:textColor="#000000"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <Button
+        android:id="@+id/show_paired_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="72dp"
+        android:layout_marginEnd="16dp"
+        android:background="#CF6679"
+        android:elevation="10dp"
+        android:onClick="showPairedDevices"
+        android:text="Show Paired Devices"
+        app:layout_constraintBottom_toBottomOf="@+id/bluetooth_scan"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/bluetooth_scan" />
+
+    <EditText
+        android:id="@+id/send_command_bt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="31dp"
+        android:layout_marginTop="40dp"
+        android:ems="10"
+        android:hint="Type command to send"
+        android:inputType="textPersonName"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#BDBDBD"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scrollView" />
+
+    <Button
+        android:id="@+id/send_button_bt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="16dp"
+        android:background="#00BFA5"
+        android:elevation="10dp"
+        android:onClick="sendCommandsBt"
+        android:text="Send"
+        android:textColor="#000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.781"
+        app:layout_constraintStart_toEndOf="@+id/send_command_bt"
+        app:layout_constraintTop_toBottomOf="@+id/scrollView" />
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="387dp"
+        android:layout_height="290dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp"
+        android:background="#000000"
+        android:elevation="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/clear_button">
+
+        <TextView
+            android:id="@+id/text"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="bottom"
+            android:text=""
+            android:textColor="#2ECC71"
+            android:textSize="15sp" />
+
+    </ScrollView>
+
+    <Button
+        android:id="@+id/clear_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="312dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="11dp"
+        android:background="#212121"
+        android:elevation="6dp"
+        android:onClick="clearBt"
+        android:text="Clear"
+        android:textColor="#FF6F00"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/show_paired_button" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="169dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="64dp"
+        android:layout_marginBottom="8dp"
+        android:text="Terminal"
+        android:textColor="#E57373"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/scrollView"
+        app:layout_constraintEnd_toStartOf="@+id/clear_button"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bluetooth_scan"
+        app:layout_constraintVertical_bias="0.846" />
+
+</android.support.constraint.ConstraintLayout>
