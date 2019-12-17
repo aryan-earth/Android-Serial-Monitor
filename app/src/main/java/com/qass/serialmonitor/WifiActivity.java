@@ -168,6 +168,11 @@ public class WifiActivity extends AppCompatActivity {
 
     }
 
+    public void scan(View view) {
+        Intent intent = new Intent(this, ShowScannedWifi.class);
+        startActivity(intent);
+    }
+
     public void showWifiToast(int i) {
         if(i == 0) {
             Toast.makeText(this, "Host Not Found!", Toast.LENGTH_SHORT).show();

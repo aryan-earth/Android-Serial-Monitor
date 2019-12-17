@@ -342,7 +342,11 @@ public class BluetoothActivity extends AppCompatActivity {
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        ConnectedThread ct = new ConnectedThread(mmSocket);
-        ct.cancel();
+        try {
+            ConnectedThread ct = new ConnectedThread(mmSocket);
+            ct.cancel();
+        } catch(Exception exc) {
+
+        }
     }
 }

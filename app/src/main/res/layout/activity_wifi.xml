@@ -110,8 +110,8 @@
         android:layout_marginEnd="8dp"
         android:ems="10"
         android:hint="Input IP Address"
-        android:textColor="@android:color/holo_green_light"
         android:inputType="textPersonName"
+        android:textColor="@android:color/holo_green_light"
         android:textColorHint="#FAFAFA"
         app:layout_constraintEnd_toStartOf="@+id/port_editText"
         app:layout_constraintHorizontal_bias="0.015"
@@ -159,4 +159,21 @@
         android:textSize="20sp"
         app:layout_constraintStart_toEndOf="@+id/button2"
         app:layout_constraintTop_toBottomOf="@+id/ip_editText" />
+
+    <Button
+        android:id="@+id/button_scan_wifi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="68dp"
+        android:layout_marginEnd="16dp"
+        android:onClick="scan"
+        android:textColor="#FAFAFA"
+        android:background="@android:color/transparent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/textView6"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="Scan"/>
+
 </android.support.constraint.ConstraintLayout>

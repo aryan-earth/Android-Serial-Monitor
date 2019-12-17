@@ -15,7 +15,6 @@
         android:elevation="4dp"
         android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
@@ -26,11 +25,11 @@
             android:layout_width="wrap_content"
             android:layout_height="30dp"
             android:layout_gravity="end"
+            android:layout_marginEnd="20dp"
             android:background="@android:color/transparent"
             android:onClick="aboutUs"
             android:scaleType="fitEnd"
             android:text="About us"
-            android:layout_marginEnd="20dp"
             android:textStyle="bold"
             tools:layout_editor_absoluteX="370dp"
             tools:layout_editor_absoluteY="10dp" />
@@ -41,7 +40,7 @@
         android:layout_width="80dp"
         android:layout_height="80dp"
         android:layout_marginStart="165dp"
-        android:layout_marginTop="44dp"
+        android:layout_marginTop="48dp"
         android:layout_marginEnd="166dp"
         android:onClick="startBluetoothActivity"
         app:layout_constraintEnd_toEndOf="parent"
@@ -55,7 +54,7 @@
         android:layout_width="80dp"
         android:layout_height="80dp"
         android:layout_marginStart="165dp"
-        android:layout_marginTop="56dp"
+        android:layout_marginTop="52dp"
         android:layout_marginEnd="166dp"
         android:onClick="startWifiActivity"
         app:layout_constraintEnd_toEndOf="parent"
@@ -69,7 +68,7 @@
         android:layout_width="80dp"
         android:layout_height="80dp"
         android:layout_marginStart="165dp"
-        android:layout_marginTop="56dp"
+        android:layout_marginTop="52dp"
         android:layout_marginEnd="166dp"
         android:onClick="startUsbActivity"
         app:layout_constraintEnd_toEndOf="parent"
@@ -78,33 +77,34 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView2"
         app:srcCompat="@drawable/ic_action_usb" />
 
-    <ImageView
-        android:id="@+id/imageView13"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:layout_marginStart="155dp"
-        android:layout_marginTop="28dp"
-        android:layout_marginEnd="156dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/main_activity_toolbar"
-        app:srcCompat="@mipmap/qass_logo" />
-
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="143dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="32dp"
         android:layout_marginEnd="143dp"
         android:text="Choose Mode"
         android:textColor="#121212"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView13" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView7" />
 
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="137dp"
+        android:layout_height="134dp"
+        android:layout_marginStart="137dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="137dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/main_activity_toolbar"
+        app:srcCompat="@mipmap/qass_logo_fore_c" />
 
 
 </android.support.constraint.ConstraintLayout>
